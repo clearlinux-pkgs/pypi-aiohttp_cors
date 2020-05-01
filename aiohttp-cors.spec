@@ -4,7 +4,7 @@
 #
 Name     : aiohttp-cors
 Version  : 0.7.0
-Release  : 11
+Release  : 12
 URL      : https://files.pythonhosted.org/packages/44/9e/6cdce7c3f346d8fd487adf68761728ad8cd5fbc296a7b07b92518350d31f/aiohttp-cors-0.7.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/44/9e/6cdce7c3f346d8fd487adf68761728ad8cd5fbc296a7b07b92518350d31f/aiohttp-cors-0.7.0.tar.gz
 Summary  : CORS support for aiohttp
@@ -14,21 +14,27 @@ Requires: aiohttp-cors-license = %{version}-%{release}
 Requires: aiohttp-cors-python = %{version}-%{release}
 Requires: aiohttp-cors-python3 = %{version}-%{release}
 Requires: aiohttp
-Requires: typing
 BuildRequires : aiohttp
 BuildRequires : buildreq-distutils3
 BuildRequires : pytest-runner
 BuildRequires : setuptools
-BuildRequires : typing
 
 %description
-========================
 CORS support for aiohttp
-========================
-``aiohttp_cors`` library implements
-`Cross Origin Resource Sharing (CORS) <cors_>`__
-support for `aiohttp <aiohttp_>`__
-asyncio-powered asynchronous HTTP server.
+        ========================
+        
+        ``aiohttp_cors`` library implements
+        `Cross Origin Resource Sharing (CORS) <cors_>`__
+        support for `aiohttp <aiohttp_>`__
+        asyncio-powered asynchronous HTTP server.
+        
+        Jump directly to `Usage`_ part to see how to use ``aiohttp_cors``.
+        
+        Same-origin policy
+        ==================
+        
+        Web security model is tightly connected to
+        `Same-origin policy (SOP) <sop_>`__.
 
 %package license
 Summary: license components for the aiohttp-cors package.
@@ -67,12 +73,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1585319719
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1588359632
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
