@@ -4,7 +4,7 @@
 #
 Name     : pypi-aiohttp_cors
 Version  : 0.7.0
-Release  : 31
+Release  : 32
 URL      : https://files.pythonhosted.org/packages/44/9e/6cdce7c3f346d8fd487adf68761728ad8cd5fbc296a7b07b92518350d31f/aiohttp-cors-0.7.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/44/9e/6cdce7c3f346d8fd487adf68761728ad8cd5fbc296a7b07b92518350d31f/aiohttp-cors-0.7.0.tar.gz
 Summary  : CORS support for aiohttp
@@ -17,8 +17,7 @@ BuildRequires : buildreq-distutils3
 BuildRequires : pypi(aiohttp)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(typing)
-BuildRequires : pytest-runner
-Provides: aiohttp-cors
+BuildRequires : pypi-pytest_runner
 
 %description
 CORS support for aiohttp
@@ -75,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641408353
+export SOURCE_DATE_EPOCH=1642466497
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
