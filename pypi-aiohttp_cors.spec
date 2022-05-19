@@ -4,13 +4,12 @@
 #
 Name     : pypi-aiohttp_cors
 Version  : 0.7.0
-Release  : 34
+Release  : 35
 URL      : https://files.pythonhosted.org/packages/44/9e/6cdce7c3f346d8fd487adf68761728ad8cd5fbc296a7b07b92518350d31f/aiohttp-cors-0.7.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/44/9e/6cdce7c3f346d8fd487adf68761728ad8cd5fbc296a7b07b92518350d31f/aiohttp-cors-0.7.0.tar.gz
 Summary  : CORS support for aiohttp
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: pypi-aiohttp_cors-filemap = %{version}-%{release}
 Requires: pypi-aiohttp_cors-license = %{version}-%{release}
 Requires: pypi-aiohttp_cors-python = %{version}-%{release}
 Requires: pypi-aiohttp_cors-python3 = %{version}-%{release}
@@ -36,14 +35,6 @@ CORS support for aiohttp
         Web security model is tightly connected to
         `Same-origin policy (SOP) <sop_>`__.
 
-%package filemap
-Summary: filemap components for the pypi-aiohttp_cors package.
-Group: Default
-
-%description filemap
-filemap components for the pypi-aiohttp_cors package.
-
-
 %package license
 Summary: license components for the pypi-aiohttp_cors package.
 Group: Default
@@ -64,7 +55,6 @@ python components for the pypi-aiohttp_cors package.
 %package python3
 Summary: python3 components for the pypi-aiohttp_cors package.
 Group: Default
-Requires: pypi-aiohttp_cors-filemap = %{version}-%{release}
 Requires: python3-core
 Provides: pypi(aiohttp_cors)
 Requires: pypi(aiohttp)
@@ -85,7 +75,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1652992356
+export SOURCE_DATE_EPOCH=1652994299
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -124,10 +114,6 @@ popd
 
 %files
 %defattr(-,root,root,-)
-
-%files filemap
-%defattr(-,root,root,-)
-/usr/share/clear/filemap/filemap-pypi-aiohttp_cors
 
 %files license
 %defattr(0644,root,root,0755)
