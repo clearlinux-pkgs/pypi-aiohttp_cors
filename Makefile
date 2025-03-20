@@ -1,5 +1,5 @@
 PKG_NAME := pypi-aiohttp_cors
-URL = https://files.pythonhosted.org/packages/44/9e/6cdce7c3f346d8fd487adf68761728ad8cd5fbc296a7b07b92518350d31f/aiohttp-cors-0.7.0.tar.gz
+URL = https://files.pythonhosted.org/packages/1d/a8/3edbba1d565f7888c52e04ac6188e19b812a9fc39d81dea413f3abf81bfa/aiohttp_cors-0.8.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
